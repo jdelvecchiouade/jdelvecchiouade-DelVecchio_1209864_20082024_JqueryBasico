@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messi</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            color: #1a73e8;
+            font-family: Arial, sans-serif;
+        }
+        #titulo {
+            color: #1a73e8;
+            font-weight: bold;
+        }
+        .btn-custom {
+            background-color: #1a73e8;
+            border-color: #1a73e8;
+            color: #ffffff;
+        }
+        .btn-custom:hover {
+            background-color: #155cb0;
+            border-color: #155cb0;
+        }
+        #imagen {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="text-center p-5">
+    <h1 id="titulo">¡Mirá la siguiente imagen!</h1>
+    <div class="container mt-4">
+        <button id="btn-ocultar" class="btn btn-custom m-2">Ocultar </button>
+        <button id="btn-mostrar" class="btn btn-custom m-2">Mostrar </button>
+        <div class="mt-4">
+            <img id="imagen" src="./images/messi.webp" alt="messi" class="img-fluid">
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#btn-ocultar").click(function() {
+                $("#imagen").hide();
+                $("#titulo").text("¡No tenemos ninguna imagen!");
+            });
+            $("#btn-mostrar").click(function() {
+                $("#imagen").show();
+                $("#titulo").text("¡Mirá la siguiente imagen!");
+            });
+        });
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.
